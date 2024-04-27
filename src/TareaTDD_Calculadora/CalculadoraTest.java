@@ -31,5 +31,26 @@ class CalculadoraTest {
     }
 
 
+    @Test
+    void suma1y2(){
+        //ARRANGE
+        c=new Calculadora();
+        String pasar="1,2";
+        //ACT
+        int resultado=c.operacionTDD(pasar);
+        //ASSERT
+        assertEquals(3,resultado);
+    }
+
+    @org.junit.jupiter.api.Test
+    void suma3Numeros(){
+        c=new Calculadora();
+        String pasar="1,1,2";
+        //ACT
+        int resultado=c.operacionTDD(pasar);
+        //ASSERT
+        assertEquals(4,resultado);
+    }
+
 
 }
