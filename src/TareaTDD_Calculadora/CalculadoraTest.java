@@ -73,5 +73,16 @@ class CalculadoraTest {
         assertEquals(-1,resultado,"Número negativo no permitido");
     }
 
+    @Test
+    void detectar1000(){
+        //ARRANGE
+        c=new Calculadora();
+        String pasar="5,1002";
+        //ACT
+        int resultado=c.operacionTDD(pasar);
+        //ASSERT
+        assertEquals(5,resultado,"Número superior a 1000 ignorado");
+    }
+
 
 }
