@@ -52,5 +52,15 @@ class CalculadoraTest {
         assertEquals(4,resultado);
     }
 
+    @Test
+    void sumaVacio(){
+        c=new Calculadora();
+        String pasar="1,2,";
+        //ACT
+        int resultado=c.operacionTDD(pasar);
+        //ASSERT
+        assertEquals(-1,resultado);
+    }
+
 
 }
