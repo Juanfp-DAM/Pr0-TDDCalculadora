@@ -62,5 +62,16 @@ class CalculadoraTest {
         assertEquals(-1,resultado);
     }
 
+    @Test
+    void detectaNegativos(){
+        //ARRANGE
+        c=new Calculadora();
+        String pasar ="1,2,-2";
+        //ACT
+        int resultado = c.operacionTDD(pasar);
+        //ASSERT
+        assertEquals(-1,resultado,"Número negativo no permitido");
+    }
+
 
 }
